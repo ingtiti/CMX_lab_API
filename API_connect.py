@@ -33,7 +33,7 @@ try:
    verify=False)
    print ("GET enviado")
    parsed = json.loads(request.content)
-   print json.dumps(parsed, indent=2)
+   print (json.dumps(parsed, indent=2))
 
 except requests.exceptions.RequestException as e:
            print(e)
