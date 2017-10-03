@@ -2,7 +2,6 @@ import requests
 requests.packages.urllib3.disable_warnings()
 from requests.auth import HTTPBasicAuth
 import json
-import base64
 
 
 def main():
@@ -32,6 +31,8 @@ def main():
        print ("GET enviado")
        parsed = json.loads(request.content)
        print (json.dumps(parsed, indent=2))
+       cuenta = parsed["total"]
+       print (cuenta["total"])
 
    except requests.exceptions.RequestException as e:
                print(e)
